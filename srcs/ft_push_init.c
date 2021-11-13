@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 20:25:19 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/12 21:35:57 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/12 23:56:51 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	ft_in_stack(t_stack *s, int data)
 	while (s)
 	{
 		if (s->data == data)
-			return (1);
+			return (TRUE);
 		s = s->next;
 	}
 	return (0);
@@ -29,7 +29,7 @@ int	ft_push_init(t_stack **s, int data, int index)
 	t_stack	*last;
 
 	last = *s;
-	if (ft_in_stack(*s, data) == 1)
+	if (ft_in_stack(*s, data) == TRUE)
 		return (ft_ps("Error: One int is present multiples times\n"));
 	elem = malloc(sizeof(t_stack));
 	if (!elem)
@@ -41,11 +41,11 @@ int	ft_push_init(t_stack **s, int data, int index)
 	if (last == NULL)
 	{
 		*s = elem;
-		return (1);
+		return (TRUE);
 	}
 	while (last->next)
 		last = last->next;
 	last->next = elem;
 	last->next_sort = elem;
-	return (1);
+	return (TRUE);
 }

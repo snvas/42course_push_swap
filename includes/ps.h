@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 18:31:35 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/12 23:32:01 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/12 23:54:03 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 # define PS_H
 
 # include <limits.h>
-# include <stdio.h>
 # include "libft.h"
+
+# define TRUE 1
+# define FALSE 0
 
 typedef struct s_stack
 {

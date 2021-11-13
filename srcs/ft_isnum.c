@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 19:14:30 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/12 21:11:00 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/12 23:51:43 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,16 @@ static int	ft_isprefix_s(const char *str, int base)
 	if (base == 2 || base == 8 || base == 16)
 	{
 		if (str[i] != '0')
-			return (0);
+			return (FALSE);
 		i++;
 		if (base == 2 && (ft_toupper(str[i]) == 'B'))
-			return (1);
+			return (TRUE);
 		if (base == 16 && (ft_toupper(str[i]) == 'X'))
-			return (1);
+			return (TRUE);
 		if (base == 8)
-			return (1);
+			return (TRUE);
 	}
-	return (0);
+	return (FALSE);
 }
 
 static int	ft_isdigit_base_s(char c, int base)
@@ -58,7 +58,7 @@ int	ft_isnum_s(char *str, int base)
 	while (ft_isspace_ps(str[i]))
 		i++;
 	if (base != 10 && !ft_isprefix_s(&str[i], base))
-		return (0);
+		return (FALSE);
 	if (base == 2 || base == 16)
 		i += 2;
 	else if (base == 8)
@@ -69,6 +69,6 @@ int	ft_isnum_s(char *str, int base)
 		digits++;
 	}
 	if (!str[i] && digits)
-		return (1);
-	return (0);
+		return (TRUE);
+	return (FALSE);
 }

@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 21:13:42 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/12 21:22:23 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/12 23:55:28 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ int	ft_has_index(t_stack *s, int index)
 	while (s)
 	{
 		if (s->index == index)
-			return (1);
+			return (TRUE);
 		s = s->next;
 	}
-	return (0);
+	return (FALSE);
 }
 
 void	ft_solve_5(t_data *d)
