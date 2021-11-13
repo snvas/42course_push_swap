@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 18:51:38 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/12 23:54:34 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/13 00:05:50 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	ft_arg(int argc, char **argv, t_data *d)
 	{
 		if (ft_arg_error(argv[x]) == FALSE)
 			return (FALSE);
-		if (ft_push_init(&(d->a), ft_atoi(argv[x]), 1) == FALSE)
+		if (ft_push_init(&(d->a), ft_atoi(argv[x]), -1) == FALSE)
 			return (FALSE);
 		x++;
 	}
