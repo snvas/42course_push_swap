@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 13:55:24 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/12 21:08:21 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/13 00:39:58 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,23 @@
 
 int	ft_atoi(const char *nptr)
 {
-	int	num;
-	int	sign;
+	int	i;
+	int	res;
+	int	neg;
 
-	while ((ft_isspace(*nptr)))
-		nptr++;
-	sign = 1;
-	if (*nptr == '+' || *nptr == '-')
+	i = 0;
+	res = 0;
+	neg = 1;
+	while (nptr[i] == '\t' || nptr[i] == '\v' || nptr[i] == '\n'
+		|| nptr[i] == '\f' || nptr[i] == '\r' || nptr[i] == ' ')
+		i++;
+	if (nptr[i] == '-' || nptr[i] == '+')
 	{
-		if (*nptr == '-')
-			sign = -1;
-		nptr++;
+		if (nptr[i] == '-')
+			neg = -neg;
+		i++;
 	}
-	num = 0;
-	while ((ft_isdigit(*nptr)))
-	{
-		num *= 10;
-		num += sign * (*nptr - '0');
-		nptr++;
-	}
-	return (num);
+	while (nptr[i] >= '0' && nptr[i] <= '9')
+		res = res * 10 + (nptr[i++] - 48);
+	return (res * neg);
 }
