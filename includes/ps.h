@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 18:31:35 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/12 21:10:10 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/12 22:01:12 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,20 @@ void	ft_swap_stack(t_stack **x, t_stack *y);
 void	ft_indexing(t_stack *sorted_index, t_data *d);
 int		ft_isspace_ps(int c);
 
+int		ft_has_index(t_stack *s, int index);
+void	ft_solve_5(t_data *d);
+int		ft_max(int x, int y);
+int		ft_min(int x, int y);
+int		ft_abs(int a);
+int		ft_ps(char *str);
+void	ft_rra(t_data *a);
+void	ft_rrb(t_data *a);
+void	ft_rrr(t_data *a);
+void	ft_ra(t_data *d);
+void	ft_rb(t_data *d);
+void	ft_rr(t_data *d);
+void	ft_sa(t_data *d);
+void	ft_sb(t_data *d);
+void	ft_ss(t_data *d);
 
 #endif

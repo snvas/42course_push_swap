@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_indexing.c                                      :+:      :+:    :+:   */
+/*   ft_abs_max_min.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/12 20:55:35 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/12 21:22:36 by snovaes          ###   ########.fr       */
+/*   Created: 2021/11/12 21:23:56 by snovaes           #+#    #+#             */
+/*   Updated: 2021/11/12 21:26:32 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps.h"
 
-void	ft_indexing(t_stack *sorted_index, t_data *d)
+int	ft_abs(int a)
 {
-	int	i;
+	if (a < 0)
+		return (-a);
+	return (a);
+}
 
-	i = 0;
-	while (sorted_index)
-	{
-		sorted_index->index = i++;
-		sorted_index = sorted_index->next_sort;
-	}
-	d->max = i;
+int	ft_min(int x, int y)
+{
+	if (x > y)
+		return (y);
+	return (x);
+}
+
+int	ft_max(int x, int y)
+{
+	if (x > y)
+		return (x);
+	return (y);
 }

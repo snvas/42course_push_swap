@@ -20,7 +20,14 @@ SRCS = push_swap.c \
 		ft_push_init.c \
 		ft_stack_sort.c \
 		ft_isspace_ps.c \
-		ft_indexing.c
+		ft_indexing.c \
+		ft_solve5.c \
+		ft_abs_max_min.c \
+		ft_action_p.c \
+		ft_action_rr.c \
+		ft_action_r.c \
+		ft_action_s.c \
+		ft_ps.c \
 
 SRCS_PS = $(addprefix $(SRCSPATH), $(SRCS))
 OBJSNAME_PS = $(SRCNAME_PS:.c=.o)

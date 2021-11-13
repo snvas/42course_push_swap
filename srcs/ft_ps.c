@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_indexing.c                                      :+:      :+:    :+:   */
+/*   ft_ps.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/12 20:55:35 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/12 21:22:36 by snovaes          ###   ########.fr       */
+/*   Created: 2021/11/12 21:33:08 by snovaes           #+#    #+#             */
+/*   Updated: 2021/11/12 21:44:05 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps.h"
 
-void	ft_indexing(t_stack *sorted_index, t_data *d)
+int	ft_ps(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (sorted_index)
-	{
-		sorted_index->index = i++;
-		sorted_index = sorted_index->next_sort;
-	}
-	d->max = i;
+	while (str[i])
+		i++;
+	write(1, str, 1);
+	return (i);
 }

@@ -6,13 +6,13 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 20:25:19 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/12 20:55:08 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/12 21:35:57 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps.h"
 
-static int ft_in_stack(t_stack *s, int data)
+static int	ft_in_stack(t_stack *s, int data)
 {
 	while (s)
 	{
@@ -23,17 +23,17 @@ static int ft_in_stack(t_stack *s, int data)
 	return (0);
 }
 
-int ft_push_init(t_stack **s, int data, int index)
+int	ft_push_init(t_stack **s, int data, int index)
 {
-	t_stack *elem;
-	t_stack *last;
+	t_stack	*elem;
+	t_stack	*last;
 
 	last = *s;
 	if (ft_in_stack(*s, data) == 1)
-		return (printf("Error: One int is present multiples times\n"));
+		return (ft_ps("Error: One int is present multiples times\n"));
 	elem = malloc(sizeof(t_stack));
 	if (!elem)
-		return (printf("Error: Malloc failed in ft_push_init\n"));
+		return (ft_ps("Error: Malloc failed in ft_push_init\n"));
 	elem->data = data;
 	elem->index = index;
 	elem->next = NULL;
@@ -49,4 +49,3 @@ int ft_push_init(t_stack **s, int data, int index)
 	last->next_sort = elem;
 	return (1);
 }
-
