@@ -1,42 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_action_p.c                                      :+:      :+:    :+:   */
+/*   ft_distance_to_top.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/12 21:28:11 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/12 22:11:32 by snovaes          ###   ########.fr       */
+/*   Created: 2021/11/12 22:15:28 by snovaes           #+#    #+#             */
+/*   Updated: 2021/11/12 22:34:46 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps.h"
 
-static void	ft_p(t_stack **s1, t_stack **s2)
+int	ft_stack_size(t_stack *s)
 {
-	t_stack	*head;
+	int	i;
 
-	if (!*s1)
-		return ;
-	head = *s1;
-	*s1 = head->next;
-	if (*s2)
-		head->next = *s2;
-	else
-		head->next = NULL;
-	*s2 = head;
+	i = 0;
+	while (s)
+	{
+		i++;
+		s = s->next;
+	}
+	return (i);
 }
 
-void	ft_pa(t_data *d)
+int	ft_distance_to_top(t_stack *a, int index)
 {
-	ft_p(&(d->b), &(d->a));
-	if (d->print)
-		ft_ps("pa\n");
-}
+	int	i;
+	int	size;
 
-void	ft_pb(t_data *d)
-{
-	ft_p(&(d->a), &(d->b));
-	if (d->print)
-		ft_ps("pb\n");
+	i = 0;
+	size = ft_stack_size(a);
+	while (a)
+	{
+		if (a->index == index)
+			break ;
+		a = a->next;
+		i++;
+	}
+	if (i > size / 2)
+		i -= size;
+	return (i);
 }

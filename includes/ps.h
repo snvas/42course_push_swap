@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 18:31:35 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/12 22:01:12 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/12 23:32:01 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ typedef struct s_data
 {
 	t_stack	*a;
 	t_stack	*b;
+	t_stack	*tmp;
 	int		max;
 	int		big;
 	int		size;
@@ -58,14 +59,29 @@ int		ft_max(int x, int y);
 int		ft_min(int x, int y);
 int		ft_abs(int a);
 int		ft_ps(char *str);
-void	ft_rra(t_data *a);
-void	ft_rrb(t_data *a);
-void	ft_rrr(t_data *a);
+void	ft_pa(t_data *d);
+void	ft_pb(t_data *d);
+void	ft_rra(t_data *d);
+void	ft_rrb(t_data *d);
+void	ft_rrr(t_data *d);
 void	ft_ra(t_data *d);
 void	ft_rb(t_data *d);
 void	ft_rr(t_data *d);
 void	ft_sa(t_data *d);
 void	ft_sb(t_data *d);
 void	ft_ss(t_data *d);
+void	ft_rotator(t_data *d, int ra, int rb);
+int		ft_distance_to_top(t_stack *a, int index);
+int		ft_stack_size(t_stack *s);
+void	ft_solve(t_data *d, int group);
+int		ft_can_swap(t_stack *s);
+int		ft_biggest_loop(t_stack *start, int set);
+int		ft_loop_stack(t_stack *s, t_stack *start, int set);
+t_stack	*ft_nearest_in_group(t_stack *s, int group, int group_size);
+int		ft_insert_distance(t_stack *s, int t, int size);
+int		ft_distance_to_index(int index, int size);
+void	ft_opti_rotate_b(t_data *d, int max_distance, int *ra, int *rb);
+void	ft_push_back_to_a(t_data *d);
+t_stack	*ft_get_last(t_stack *s);
 
 #endif

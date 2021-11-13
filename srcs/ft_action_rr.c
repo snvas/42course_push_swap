@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 21:37:47 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/12 21:43:23 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/12 22:10:21 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,21 +30,21 @@ static void	ft_rru(t_stack **s)
 	prev->next = NULL;
 }
 
-void	ft_rra(t_data *a)
+void	ft_rra(t_data *d)
 {
 	ft_rru(&(d->a));
 	if (d->print)
 		ft_ps("rra\n");
 }
 
-void	ft_rrb(t_data *a)
+void	ft_rrb(t_data *d)
 {
 	ft_rru(&(d->b));
 	if (d->print)
 		ft_ps("rrb\n");
 }
 
-void	ft_rrr(t_data *a)
+void	ft_rrr(t_data *d)
 {
 	ft_rru(&(d->a));
 	ft_rru(&(d->b));
