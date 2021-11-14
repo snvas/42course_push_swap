@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 22:15:28 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/12 22:34:46 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/13 22:04:51 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,11 @@ int	ft_distance_to_top(t_stack *a, int index)
 	if (i > size / 2)
 		i -= size;
 	return (i);
+}
+
+int	ft_distance_to_index(int index, int size)
+{
+	if (index >= size / 2)
+		index -= size;
+	return (index);
 }

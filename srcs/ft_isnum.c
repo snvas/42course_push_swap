@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 19:14:30 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/12 23:51:43 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/13 22:00:21 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,8 @@ int	ft_isnum_s(char *str, int base)
 	if (base == 2 || base == 16)
 		i += 2;
 	else if (base == 8)
+		i++;
+	else if (base == 10 && (str[i] == '-' || str[i] == '+'))
 		i++;
 	while (ft_isdigit_base_s(str[i], base) >= 0)
 	{

@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 22:53:18 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/12 23:31:04 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/13 22:06:13 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,6 @@ int	ft_insert_distance(t_stack *s, int t, int size)
 	return (c_max[1]);
 }
 
-int	ft_distance_to_index(int index, int size)
-{
-	if (index >= size / 2)
-		index -= size;
-	return (index);
-}
-
 void	ft_opti_rotate_b(t_data *d, int max_distance, int *ra, int *rb)
 {
 	int	total_distance;
@@ -61,7 +54,7 @@ void	ft_opti_rotate_b(t_data *d, int max_distance, int *ra, int *rb)
 	{
 		b_distance = ft_distance_to_index(i++, d->max - d->size);
 		insert = ft_insert_distance(d->a, d->tmp->index, d->size);
-		total_distance = ft_abs(b_distance) + ft_abs(insert);
+		total_distance = ft_abs(insert) + ft_abs(b_distance);
 		if (insert > 0 && b_distance > 0)
 			total_distance -= ft_min(b_distance, insert);
 		if (insert < 0 && b_distance < 0)
