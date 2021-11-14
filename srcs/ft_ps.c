@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 21:33:08 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/13 00:43:24 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/13 23:27:46 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,3 @@ int	ft_pserc(char *str, char *color)
 	write(STDERR, DEF, ft_strlen(DEF));
 	return (ft_strlen(color) + ft_strlen(str) + ft_strlen(DEF));
 }
-

@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 19:14:30 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/13 22:00:21 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/13 23:27:06 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,9 @@ static int	ft_isprefix_s(const char *str, int base)
 
 static int	ft_isdigit_base_s(char c, int base)
 {
-	const char	*digits;
+	const char	*digits = "0123456789ABCDEF";
 	int			i;
 
-	digits = "0123456789ABCDEF";
 	i = 0;
 	while (i < base)
 	{

@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 18:31:35 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/13 02:00:40 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/13 23:27:36 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@
 
 # define DEF	"\033[0m"
 # define RED	"\033[1;31m"
-
 
 typedef struct s_stack
 {

@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 20:25:19 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/13 21:44:19 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/13 23:28:49 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ int	ft_push_init(t_stack **s, int data, int index)
 
 	last = *s;
 	if (ft_in_stack(*s, data) == TRUE)
-		return (ft_pserc("Error: One int is present multiples times\n", RED) * 0);
+		return (ft_pserc("Error: One int is present multiples times\n",
+				RED) * 0);
 	elem = malloc(sizeof(t_stack));
 	if (!elem)
 		return (ft_pserc("Error: Malloc failed in ft_push_init\n", RED) * 0);
