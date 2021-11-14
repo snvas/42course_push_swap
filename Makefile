@@ -2,9 +2,8 @@ NAME = push_swap
 CC = clang -Wall -Wextra -Werror
 RM = rm -rf
 
-
 LBPATH =	./libft/
-LBNAME =	$(LBPATH)libft.a
+LIBNAME =	$(LBPATH)libft.a
 LBINC =		-I$(LBPATH)
 LBM =		libm
 
@@ -42,31 +41,29 @@ OBJS_PS = $(OBJSPATH_PS)*.o
 
 all: $(NAME)
 
-$(NAME): $(LBM)
+$(NAME):
+	make -C $(LBPATH)
 	@mkdir $(OBJSPATH_PS) 2> /dev/null || true
 	$(CC) -I$(INC) $(LBINC) -c $(SRCS_PS)
 	@mv *.o $(OBJSPATH_PS)
-	$(CC) $(OBJS_PS) $(LBNAME) -L$(LBPATH) $(LBINC) -I$(INC) -o $(NAME)
-	echo "$(NAME)\tcompiled!\n"
+	$(CC) $(OBJS_PS) $(LIBNAME) -L$(LBPATH) $(LBINC) -I$(INC) -o $(NAME)
+	@echo "$(NAME)\tcompiled!\n"
 
-$(LBM):
-	make -C $(LBPATH) -f Makefile
-
-lib:	$(LBNAME)
-	echo "Libft compiled.\n"
+lib:	$(LIBFTM)
+	@echo "Libft compiled.\n"
 
 clean:
 	$(RM) $(OBJS_PS)
-	make -C $(LBPATH) -f Makefile clean
-	rmdir $(OBJSPATH_PS)
-	echo "Cleaned!\n"
+	$(MAKE) -C $(LBPATH) clean
+	@rmdir $(OBJSPATH_PS) 2> /dev/null || true
+	@echo "Cleaned!\n"
 
 fclean: clean
 	$(RM) $(NAME) *.o
-	make -C $(LBPATH) -f Makefile fclean
-	echo "Fcleaned!\n"
+	$(MAKE) -C $(LBPATH) fclean
+	@echo "Fcleaned!\n"
 
 re: fclean all
-	echo "Re-compiled!\n"
+	@echo "Re-compiled!\n"
 
-.PHONY: all, clean, fclean, re, lib, $(NAME)
+.PHONY: clean, fclean, re, lib
