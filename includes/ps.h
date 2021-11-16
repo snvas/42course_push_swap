@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 18:31:35 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/16 01:03:36 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/16 02:37:25 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,8 +83,7 @@ void	ft_rra(t_data *d);
 void	ft_rrb(t_data *d);
 void	ft_rrr(t_data *d);
 
-int		ft_isnum_s(char *str, int base);
-int		ft_isspace_ps(int c);
+int		is_number(const char *nbr);
 
 // falta exit e error
 int		ft_max(int x, int y);

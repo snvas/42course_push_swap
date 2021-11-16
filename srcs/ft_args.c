@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 18:51:38 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/15 23:21:38 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/16 02:35:08 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static int	ft_arg_error(char *n)
 {
 	long	l;
 
-	if (ft_isnum_s(n, 10) == FALSE)
+	if (is_number(n) == FALSE)
 		return (ft_pserc("Error: One argument is not an int\n", RED) * 0);
 	l = ft_atol(n);
 	if (l > INT_MAX)

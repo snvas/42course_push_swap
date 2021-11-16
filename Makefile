@@ -18,7 +18,6 @@ SRCS = push_swap.c \
 		ft_is_sort.c \
 		ft_push_init.c \
 		ft_stack_sort.c \
-		ft_isspace_ps.c \
 		ft_indexing.c \
 		ft_solve5.c \
 		ft_abs_max_min.c \
