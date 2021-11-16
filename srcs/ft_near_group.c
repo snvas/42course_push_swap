@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 22:46:47 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/12 23:24:23 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/15 23:32:33 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,27 @@
 t_stack	*ft_nearest_in_group(t_stack *s, int group, int group_size)
 {
 	t_stack	*nearest;
-	t_stack	*tmp;
+	t_stack	*t;
 	int		small_distance;
 	int		distance;
 
 	small_distance = INT_MAX;
 	nearest = NULL;
-	tmp = s;
-	while (tmp)
+	t = s;
+	while (t)
 	{
-		if (tmp->index <= group_size * group && !tmp->keep)
+		if (t->index <= group_size * group && !t->keep)
 		{
-			distance = ft_distance_to_top(s, tmp->index);
+			distance = ft_distance_to_top(s, t->index);
 			if (ft_abs(distance) < ft_abs(small_distance))
 			{
 				small_distance = distance;
-				nearest = tmp;
+				nearest = t;
 				if (small_distance == 0)
 					break ;
 			}
 		}
-		tmp = tmp->next;
+		t = t->next;
 	}
 	return (nearest);
 }
