@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 18:31:35 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/15 23:11:30 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/16 01:03:36 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,5 +93,7 @@ int		ft_abs(int a);
 
 int		ft_pserc(char *str, char *color);
 int		ft_ps(char *str);
+int		ft_pser(char *str);
+int		ft_psc(char *str, char *color);
 
 #endif
