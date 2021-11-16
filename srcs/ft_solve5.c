@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 21:13:42 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/12 23:55:28 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/16 02:21:51 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	ft_solve_5(t_data *d)
 		min = INT_MAX;
 		while (s)
 		{
-			if (s->index == 0 || s->index == d->max -1)
+			if (s->index == 0 || s->index == d->max - 1)
 			{
 				distance = ft_distance_to_top(d->a, s->index);
 				if (ft_abs(distance) < ft_abs(min))
