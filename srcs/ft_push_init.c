@@ -6,13 +6,13 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 20:25:19 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/16 01:03:48 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/16 02:52:04 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps.h"
 
-static int	ft_in_stack(t_stack *s, int data)
+static int	ft_already_in_stack(t_stack *s, int data)
 {
 	while (s)
 	{
@@ -29,7 +29,7 @@ int	ft_push_init(t_stack **s, int data, int index)
 	t_stack	*last;
 
 	last = *s;
-	if (ft_in_stack(*s, data) == TRUE)
+	if (ft_already_in_stack(*s, data) == TRUE)
 		return (ft_pserc("Error: One int is present multiples times\n",
 				RED) * 0);
 	elem = malloc(sizeof(t_stack));
