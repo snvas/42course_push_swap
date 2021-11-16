@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 18:51:38 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/13 23:28:29 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/15 23:21:38 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,16 @@ static int	ft_arg_error(char *n)
 	return (TRUE);
 }
 
-int	ft_arg(int argc, char **argv, t_data *d)
+int	ft_arg(int ac, char **av, t_data *d)
 {
 	int	x;
 
 	x = 1;
-	while (x < argc)
+	while (x < ac)
 	{
-		if (ft_arg_error(argv[x]) == FALSE)
+		if (ft_arg_error(av[x]) == FALSE)
 			return (FALSE);
-		if (ft_push_init(&(d->a), ft_atoi(argv[x]), -1) == FALSE)
+		if (ft_push_init(&(d->a), ft_atoi(av[x]), -1) == FALSE)
 			return (FALSE);
 		x++;
 	}

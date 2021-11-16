@@ -6,17 +6,17 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 21:23:56 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/12 21:26:32 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/15 23:12:33 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps.h"
 
-int	ft_abs(int a)
+int	ft_max(int x, int y)
 {
-	if (a < 0)
-		return (-a);
-	return (a);
+	if (x > y)
+		return (x);
+	return (y);
 }
 
 int	ft_min(int x, int y)
@@ -26,9 +26,9 @@ int	ft_min(int x, int y)
 	return (x);
 }
 
-int	ft_max(int x, int y)
+int	ft_abs(int a)
 {
-	if (x > y)
-		return (x);
-	return (y);
+	if (a < 0)
+		return (-a);
+	return (a);
 }

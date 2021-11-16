@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 18:31:35 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/13 23:27:36 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/15 23:11:30 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ typedef struct s_data
 	int		print;
 }	t_data;
 
-int		ft_arg(int argc, char **argv, t_data *d);
+int		ft_arg(int ac, char **av, t_data *d);
 int		ft_push_init(t_stack **s, int data, int index);
 
 void	ft_indexing(t_stack *sorted_index, t_data *d);
