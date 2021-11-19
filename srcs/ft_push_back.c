@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 22:53:18 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/13 22:06:13 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/18 23:57:00 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@ int	ft_insert_distance(t_stack *s, int t, int size)
 	c_max[1] = INT_MAX;
 	while (c)
 	{
+		/*se o index do último da lista for maior que o index c 
+		&& o index de t for menor que o index c ou t for maior que o index do último da lista
+		ou index de t for maior que o último da lista && index t for menor que o último da lista*/
 		if ((p->index > c->index && (t < c->index || t > p->index))
 			|| (t > p->index && t < c->index))
 		{

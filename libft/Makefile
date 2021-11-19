@@ -6,13 +6,13 @@
 #    By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/26 23:38:05 by snovaes           #+#    #+#              #
-#    Updated: 2021/11/12 21:08:45 by snovaes          ###   ########.fr        #
+#    Updated: 2021/11/16 23:50:42 by snovaes          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
 NAME = libft.a
 

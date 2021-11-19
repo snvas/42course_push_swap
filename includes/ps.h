@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 18:31:35 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/16 02:37:25 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/16 23:24:58 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ typedef struct s_stack
 	int				index;
 	int				keep;
 	struct s_stack	*next;
-	struct s_stack	*next_sort;	
+	struct s_stack	*next_sort;
 }	t_stack;
 
 typedef struct s_data
