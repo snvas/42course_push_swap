@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 22:21:18 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/18 23:49:30 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/26 22:47:00 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ void	ft_solve(t_data *d, int group)
 	int	distance;
 
 	ft_init_solve(d);
-//enquanto (tamanho da lista for maior ou igual ao maior número de loops && group for menor ou igual ao group_count + 1)
 	while (d->size >= d->big && group <= (d->group_count + 1))
 	{
 		d->tmp = ft_nearest_in_group(d->a, group, d->group_size);

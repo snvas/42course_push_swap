@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 20:40:56 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/18 22:21:10 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/26 22:46:42 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ void	ft_stack_sort(t_stack **head)
 	last = *head;
 	while (last && last->next_sort)
 	{
-		//se o valor atual - o valor seguinte for maior do que zero
 		if (last->data - last->next_sort->data > 0)
 		{
 			if (prev == NULL)
@@ -41,7 +40,6 @@ void	ft_stack_sort(t_stack **head)
 			last = *head;
 			prev = NULL;
 		}
-		//senão só troca de posição
 		else
 		{
 			prev = last;

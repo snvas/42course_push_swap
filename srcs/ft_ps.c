@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 21:33:08 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/19 00:33:40 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/26 22:47:28 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_ps(char *str)
 {
-	int	i;
-	char n;
+	int		i;
+	char	n;
 
 	i = 0;
 	while (str[i])
