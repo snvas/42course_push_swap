@@ -6,13 +6,13 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 18:51:38 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/16 02:35:08 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/27 13:42:22 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps.h"
 
-static int	ft_arg_error(char *n)
+static int	ft_check_arg(char *n)
 {
 	long	l;
 
@@ -28,16 +28,18 @@ static int	ft_arg_error(char *n)
 	return (TRUE);
 }
 
-int	ft_arg(int ac, char **av, t_data *d)
+int	ft_args(int ac, char **av, t_data *d)
 {
 	int	x;
+	int start;
 
 	x = 1;
 	while (x < ac)
 	{
-		if (ft_arg_error(av[x]) == FALSE)
+		if (ft_check_arg(av[x]) == FALSE)
 			return (FALSE);
-		if (ft_push_init(&(d->a), ft_atoi(av[x]), -1) == FALSE)
+		start = ft_push_init(&(d->a), ft_atoi(av[x]), -1);
+		if (start == FALSE)
 			return (FALSE);
 		x++;
 	}

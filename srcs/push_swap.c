@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 18:30:06 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/16 15:29:46 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/27 13:42:30 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main(int ac, char **av)
 	d.print = TRUE;
 	if (ac < 2)
 		return (ft_pserc("Error: Not enough argument\n", RED) * 0 + 1);
-	if (ft_arg(ac, av, &d) == FALSE)
+	if (ft_args(ac, av, &d) == FALSE)
 		return (ft_free_data(&d));
 	if (ft_is_sort(&d) == FALSE)
 	{
