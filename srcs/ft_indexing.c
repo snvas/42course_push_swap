@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 20:55:35 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/12 21:22:36 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/28 01:31:46 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@ void	ft_indexing(t_stack *sorted_index, t_data *d)
 	i = 0;
 	while (sorted_index)
 	{
-		sorted_index->index = i++;
+		sorted_index->index = i;
 		sorted_index = sorted_index->next_sort;
+		i++;
 	}
 	d->max = i;
 }
