@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 18:31:35 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/27 13:42:38 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/28 01:17:59 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ int		ft_push_init(t_stack **s, int data, int index);
 
 void	ft_indexing(t_stack *sorted_index, t_data *d);
 void	ft_solve_5(t_data *d);
+void	ft_swap_stack(t_stack **prevnext, t_stack *last);
 void	ft_stack_sort(t_stack **head);
 void	ft_solve(t_data *d, int group);
 

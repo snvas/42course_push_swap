@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 18:51:38 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/27 13:42:22 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/27 13:50:08 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int	ft_args(int ac, char **av, t_data *d)
 	int start;
 
 	x = 1;
+	start = 0;
 	while (x < ac)
 	{
 		if (ft_check_arg(av[x]) == FALSE)

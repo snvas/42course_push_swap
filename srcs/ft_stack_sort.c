@@ -6,20 +6,20 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 20:40:56 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/26 22:46:42 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/11/28 01:16:49 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps.h"
 
-void	ft_swap_stack(t_stack **x, t_stack *y)
+void	ft_swap_stack(t_stack **prevnext, t_stack *last)
 {
-	t_stack	*tmp;
+	t_stack	*swap;
 
-	tmp = *x;
-	*x = y->next_sort;
-	tmp->next_sort = y->next_sort->next_sort;
-	(*x)->next_sort = tmp;
+	swap = *prevnext;
+	*prevnext = last->next_sort;
+	swap->next_sort = last->next_sort->next_sort;
+	(*prevnext)->next_sort = swap;
 }
 
 void	ft_stack_sort(t_stack **head)
