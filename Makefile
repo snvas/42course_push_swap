@@ -11,7 +11,7 @@ SRCSPATH =		./srcs/
 OBJSPATH_PS =	./objs_push_swap/
 INC =			./includes/
 
-SRCS = push_swap.c \
+SRCS = 	push_swap.c \
 		ft_isnum.c \
 		ft_args.c \
 		ft_free.c \

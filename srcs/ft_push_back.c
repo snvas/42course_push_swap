@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 22:53:18 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/26 22:47:47 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/12/12 23:23:00 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,29 +16,25 @@ int	ft_insert_distance(t_stack *s, int t, int size)
 {
 	t_stack	*p;
 	t_stack	*c;
-	int		c_max[2];
 	int		i;
 
 	i = 0;
 	p = ft_get_last(s);
 	c = s;
-	c_max[1] = INT_MAX;
 	while (c)
 	{
 		if ((p->index > c->index && (t < c->index || t > p->index))
 			|| (t > p->index && t < c->index))
 		{
-			c_max[0] = i;
-			if (c_max[0] > size / 2)
-				c_max[0] -= size;
-			if (ft_abs(c_max[0]) < c_max[1])
-				c_max[1] = c_max[0];
+			if (i > size / 2)
+				i -= size;
+			break ;
 		}
 		p = c;
 		c = c->next;
 		i++;
 	}
-	return (c_max[1]);
+	return (i);
 }
 
 void	ft_opti_rotate_b(t_data *d, int max_distance, int *ra, int *rb)
