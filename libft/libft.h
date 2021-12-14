@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/17 15:24:56 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/12 19:35:13 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/12/14 20:08:56 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,14 @@
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1
 # endif
+
+# define STDIN	0
+# define STDOUT	1
+# define STDERR	2
+
+# define DEF	"\033[0m"
+# define RED	"\033[1;31m"
+
 
 typedef struct s_list
 {
@@ -463,4 +471,8 @@ int		ft_isspace(int c);
  * 
  */
 
+int		ft_pserc(char *str, char *color);
+int		ft_ps(char *str);
+int		ft_pser(char *str);
+int		ft_psc(char *str, char *color);
 #endif

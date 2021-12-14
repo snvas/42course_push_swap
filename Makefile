@@ -19,14 +19,12 @@ SRCS = 	push_swap.c \
 		ft_push_init.c \
 		ft_stack_sort.c \
 		ft_indexing.c \
-		ft_solve5.c \
 		ft_abs_max_min.c \
 		ft_action_p.c \
 		ft_action_rr.c \
 		ft_action_r.c \
 		ft_action_s.c \
 		ft_action_rotator.c \
-		ft_ps.c \
 		ft_distance_to_top.c \
 		ft_solve.c \
 		ft_loop.c \

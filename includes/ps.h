@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 18:31:35 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/28 01:17:59 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/12/14 20:08:23 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,6 @@
 
 # define TRUE 1
 # define FALSE 0
-
-# define STDIN	0
-# define STDOUT	1
-# define STDERR	2
-
-# define DEF	"\033[0m"
-# define RED	"\033[1;31m"
 
 typedef struct s_stack
 {
@@ -53,7 +46,6 @@ int		ft_args(int ac, char **av, t_data *d);
 int		ft_push_init(t_stack **s, int data, int index);
 
 void	ft_indexing(t_stack *sorted_index, t_data *d);
-void	ft_solve_5(t_data *d);
 void	ft_swap_stack(t_stack **prevnext, t_stack *last);
 void	ft_stack_sort(t_stack **head);
 void	ft_solve(t_data *d, int group);
@@ -90,10 +82,5 @@ int		is_number(const char *nbr);
 int		ft_max(int x, int y);
 int		ft_min(int x, int y);
 int		ft_abs(int a);
-
-int		ft_pserc(char *str, char *color);
-int		ft_ps(char *str);
-int		ft_pser(char *str);
-int		ft_psc(char *str, char *color);
 
 #endif

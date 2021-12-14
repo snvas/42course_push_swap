@@ -6,11 +6,11 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 21:33:08 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/26 22:47:28 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/12/14 20:07:50 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ps.h"
+#include "libft.h"
 
 int	ft_ps(char *str)
 {

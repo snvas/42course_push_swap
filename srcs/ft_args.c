@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 18:51:38 by snovaes           #+#    #+#             */
-/*   Updated: 2021/12/14 18:37:35 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/12/14 20:06:03 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,12 @@ static int	ft_check_arg(char *n)
 	long	l;
 
 	if (is_number(n) == FALSE)
-		return (ft_pserc("Error: One argument is not an int\n", RED) * 0);
+		return (ft_pser("Error\n") * 0);
 	l = ft_atol(n);
 	if (l > INT_MAX)
-		return (ft_pserc("Error: One argument is too big, over INT_MAX\n",
-				RED) * 0);
+		return (ft_pser("Error\n") * 0);
 	if (l < INT_MIN)
-		return (ft_pserc("Error: One argument is too small, under INT_MIN\n",
-				RED) * 0);
+		return (ft_pser("Error\n") * 0);
 	return (TRUE);
 }
 
