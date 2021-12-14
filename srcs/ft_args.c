@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 18:51:38 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/27 13:50:08 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/12/14 18:37:35 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static int	ft_check_arg(char *n)
 int	ft_args(int ac, char **av, t_data *d)
 {
 	int	x;
-	int start;
+	int	start;
 
 	x = 1;
 	start = 0;

@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 22:21:18 by snovaes           #+#    #+#             */
-/*   Updated: 2021/11/27 16:56:22 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/12/14 18:39:31 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,8 @@ void	ft_solve(t_data *d, int group)
 			ft_pb(d);
 			(d->size)--;
 		}
-		else if (d->group_count == 1){
+		else if (d->group_count == 1)
 			ft_rrr(d);
-		}
 		else
 			ft_rotator(d, ft_min(1, ft_max(-1, distance)), 0);
 	}
