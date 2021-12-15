@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/17 15:24:56 by snovaes           #+#    #+#             */
-/*   Updated: 2021/12/14 20:08:56 by snovaes          ###   ########.fr       */
+/*   Updated: 2021/12/15 16:46:45 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@
 
 # define DEF	"\033[0m"
 # define RED	"\033[1;31m"
-
 
 typedef struct s_list
 {
